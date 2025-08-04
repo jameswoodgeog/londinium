@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE population SYSTEM "http://matsim.org/files/dtd/population_v6.dtd"><population>
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE population SYSTEM "http://matsim.org/files/dtd/population_v6.dtd">
+<population>
   <!--Created 2021-10-07 12:31:26.689665-->
   <person id="agent_0">
     <attributes>
@@ -885,7 +886,7 @@
       <attribute class="java.lang.String" name="hid">hh_36</attribute>
     </attributes>
     <plan selected="yes">
-      <activity type="home" x="529403.6544040715" y="176107.60899903596" end_time="06:45:00"/>
+      <activity type="home" x="529348" y="176189" end_time="06:45:00"/>
       <leg mode="car" trav_time="00:19:00"/>
       <activity type="education" x="523938.0944871205" y="178420.9628865547" end_time="09:04:00"/>
       <leg mode="walk" trav_time="01:22:00"/>
@@ -895,7 +896,7 @@
       <leg mode="subway" trav_time="00:37:00"/>
       <activity type="gym" x="525957.797641455" y="178522.74458034264" end_time="17:41:00"/>
       <leg mode="car" trav_time="00:47:00"/>
-      <activity type="home" x="529403.6544040715" y="176107.60899903596"/>
+      <activity type="home" x="529348" y="176189"/>
     </plan>
   </person>
   <person id="agent_37">
@@ -2257,7 +2258,7 @@
       <activity type="home" x="527217.4520372846" y="179633.767043603"/>
     </plan>
   </person>
-  <person id="agent_94">
+  <!-- <person id="agent_94">
     <attributes>
       <attribute class="java.lang.String" name="subpopulation">high income</attribute>
       <attribute class="java.lang.String" name="gender">male</attribute>
@@ -2283,7 +2284,7 @@
       <leg mode="bike" trav_time="01:09:00"/>
       <activity type="home" x="523884.081424611" y="178466.13057466692"/>
     </plan>
-  </person>
+  </person> -->
   <person id="agent_95">
     <attributes>
       <attribute class="java.lang.String" name="subpopulation">high income</attribute>
