@@ -103,7 +103,7 @@
 	<module name="hermes">
 		<param name="endTime" value="32:00:00" />
 		<param name="flowCapacityFactor" value="1" />
-		<param name="mainMode" value="car" />
+		<param name="mainMode" value="car,bus,subway,walk,bike,rail,ferry" />
 		<param name="storageCapacityFactor" value="1" />
 		<param name="stuckTime" value="30" />
 		<param name="useDeterministicPt" value="true" />
@@ -111,8 +111,6 @@
 
 	<module name="travelTimeCalculator">
 		<param name="analyzedModes" value="car,bus,walk" />
-		<param name="filterModes" value="true" />
-		<param name="separateModes" value="false" />
 	</module>
 
 
