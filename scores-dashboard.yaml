@@ -1,0 +1,146 @@
+header:
+  title: Scores
+  description: Detailed score evolution by iteration and subpopulation.
+layout:
+  first:
+    - type: plotly
+      title: Average Scores by Iteration
+      datasets:
+        dataset:
+          file: outputs/scorestats.csv
+      traces:
+        - x: $dataset.iteration
+          y: $dataset.avg_average
+          type: scatter
+          mode: lines+markers
+          name: Average (All)
+        - x: $dataset.iteration
+          y: $dataset.avg_executed
+          type: scatter
+          mode: lines+markers
+          name: Executed (All)
+        - x: $dataset.iteration
+          y: $dataset.avg_best
+          type: scatter
+          mode: lines+markers
+          name: Best (All)
+        - x: $dataset.iteration
+          y: $dataset.avg_worst
+          type: scatter
+          mode: lines+markers
+          name: Worst (All)
+      layout:
+        xaxis:
+          title: Iteration
+        yaxis:
+          title: Score
+    - type: plotly
+      title: Average Scores by Iteration (Medium Income)
+      datasets:
+        dataset:
+          file: outputs/scorestats_medium income.csv
+      traces:
+        - x: $dataset.iteration
+          y: $dataset.avg_average
+          type: scatter
+          mode: lines+markers
+          name: Average (Medium)
+        - x: $dataset.iteration
+          y: $dataset.avg_executed
+          type: scatter
+          mode: lines+markers
+          name: Executed (Medium)
+        - x: $dataset.iteration
+          y: $dataset.avg_best
+          type: scatter
+          mode: lines+markers
+          name: Best (Medium)
+        - x: $dataset.iteration
+          y: $dataset.avg_worst
+          type: scatter
+          mode: lines+markers
+          name: Worst (Medium)
+      layout:
+        xaxis:
+          title: Iteration
+        yaxis:
+          title: Score
+    - type: plotly
+      title: Average Scores by Iteration (Low Income)
+      datasets:
+        dataset:
+          file: outputs/scorestats_low income.csv
+      traces:
+        - x: $dataset.iteration
+          y: $dataset.avg_average
+          type: scatter
+          mode: lines+markers
+          name: Average (Low)
+        - x: $dataset.iteration
+          y: $dataset.avg_executed
+          type: scatter
+          mode: lines+markers
+          name: Executed (Low)
+        - x: $dataset.iteration
+          y: $dataset.avg_best
+          type: scatter
+          mode: lines+markers
+          name: Best (Low)
+        - x: $dataset.iteration
+          y: $dataset.avg_worst
+          type: scatter
+          mode: lines+markers
+          name: Worst (Low)
+      layout:
+        xaxis:
+          title: Iteration
+        yaxis:
+          title: Score
+    - type: plotly
+      title: Average Scores by Iteration (High Income)
+      datasets:
+        dataset:
+          file: outputs/scorestats_high income.csv
+      traces:
+        - x: $dataset.iteration
+          y: $dataset.avg_average
+          type: scatter
+          mode: lines+markers
+          name: Average (High)
+        - x: $dataset.iteration
+          y: $dataset.avg_executed
+          type: scatter
+          mode: lines+markers
+          name: Executed (High)
+        - x: $dataset.iteration
+          y: $dataset.avg_best
+          type: scatter
+          mode: lines+markers
+          name: Best (High)
+        - x: $dataset.iteration
+          y: $dataset.avg_worst
+          type: scatter
+          mode: lines+markers
+          name: Worst (High)
+      layout:
+        xaxis:
+          title: Iteration
+        yaxis:
+          title: Score
+  second:
+    - type: csv
+      title: Raw Score Data (All)
+      dataset: outputs/scorestats.csv
+      showAllRows: true
+    - type: csv
+      title: Raw Score Data (Medium Income)
+      dataset: outputs/scorestats_medium income.csv
+      showAllRows: true
+    - type: csv
+      title: Raw Score Data (Low Income)
+      dataset: outputs/scorestats_low income.csv
+      showAllRows: true
+    - type: csv
+      title: Raw Score Data (High Income)
+      dataset: outputs/scorestats_high income.csv
+      showAllRows: true
