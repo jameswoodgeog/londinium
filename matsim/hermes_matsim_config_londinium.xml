@@ -56,7 +56,7 @@
 		<param name="createGraphs" value="false" />
 		<param name="outputDirectory" value="C:\\Users\\gy21jw\\Coding\\londinium\\outputs\\" />
 		<param name="firstIteration" value="0" />
-		<param name="lastIteration" value="49" />
+		<param name="lastIteration" value="1" />
 		<param name="eventsFileFormat" value="xml" />
 		<param name="writeEventsInterval" value="1" />
 		<param name="writePlansInterval" value="1" />

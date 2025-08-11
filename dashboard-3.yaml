@@ -37,6 +37,7 @@ layout:
   - type: map
     title: Traffic statistics
     height: 12.0
+    projection: EPSG:27700
     datasets:
       traffic: outputs/analysis/traffic/traffic_stats_by_link_daily.csv
     display:

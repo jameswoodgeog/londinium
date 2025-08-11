@@ -1,5 +1,4 @@
 header:
-  projection: CRS:27700
   title: Overview
   description: General overview of the MATSim run.
 layout:
@@ -13,6 +12,7 @@ layout:
     title: Simulated traffic volume
     height: 7.5
     width: 2.0
+    projection: EPSG:27700
     datasets:
       traffic: outputs/analysis/traffic/traffic_stats_by_link_daily.csv
     display:

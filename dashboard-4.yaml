@@ -1,28 +1,45 @@
 header:
-  tab: PT
-  title: Public Transit
-  # triggerPattern: (*.)?output_transitSchedule*xml*
+  title: Stuck Agents
+  description: Analyze agents that are 'stuck' i.e. could not finish their daily plan.
 layout:
-  viewer:
-  - type: transit
-    title: Transit Viewer
-    description: Visualize the transit schedule.
-    height: 12.0
-    # network: outputs/output_network.xml.gz
-    # network: outputs/analysis/network-all/network.avro
-    projection: 27700
-    transitSchedule: outputs/output_transitSchedule.xml.gz
-    demand: outputs/analysis/pt/pt_pax_volumes.csv.gz
-  flowmap:
-  - type: flowmap
-    title: Flow Map
-    description: Visualize the flows of different metrics
-    metrics:
-    - label: headway metric
-      dataset: analysis/pt/pt_headway_per_stop_area_pair_and_hour.csv
-      origin: stopAreaOrStop
-      zoom: 9.5
-      destination: stopAreaOrStopNext
-      flow: meanHeadway
-      colorScheme: BurgYl
-      valueTransform: inverse
+  first:
+  - type: tile
+    height: 0.1
+    dataset: outputs/analysis/population/stuck_agents.csv
+  second:
+  - type: plotly
+    title: Stuck Agents
+    description: per Mode
+    datasets:
+      dataset: outputs/analysis/population/stuck_agents_per_mode.csv
+    traces:
+    - values: $dataset.Agents
+      labels: $dataset.Mode
+      type: pie
+      sort: false
+  - type: csv
+    title: Stuck Agents
+    description: per Mode
+    dataset: outputs/analysis/population/stuck_agents_per_mode.csv
+  third:
+  - type: bar
+    title: Stuck Agents
+    description: per hour
+    dataset: outputs/analysis/population/stuck_agents_per_hour.csv
+    x: hour
+    columns:
+    - pt
+    - walk
+    useLastRow: false
+    xAxisName: Hour
+    yAxisName: "# Stuck"
+    stacked: true
+  - type: csv
+    title: Stuck Agents
+    description: per hour
+    dataset: outputs/analysis/population/stuck_agents_per_hour.csv
+  four:
+  - type: csv
+    title: Stuck Agents
+    description: per Link (Top 20)
+    dataset: outputs/analysis/population/stuck_agents_per_link.csv
