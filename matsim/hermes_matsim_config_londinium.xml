@@ -9,18 +9,18 @@
 	</module>
 
 	<module name="network">
-		<param name="inputNetworkFile" value="c:/Users/gy21jw/Coding/londinium/data/network/network.xml" />
+		<param name="inputNetworkFile" value="c:/Users/gy21jw/Coding/matsim-day/londinium_r0/data/network/network.xml" />
 	</module>
 
 	<module name="plans">
 		<param name="insistingOnUsingDeprecatedPersonAttributeFile" value="false" />
-		<param name="inputPlansFile" value="c:/Users/gy21jw/Coding/londinium/data/population/population.xml" />
+		<param name="inputPlansFile" value="c:/Users/gy21jw/Coding/matsim-day/londinium/data/population/population.xml" />
 	</module>
 
 	<module name="transit">
 		<param name="useTransit" value="true" />
-		<param name="transitScheduleFile" value="c:/Users/gy21jw/Coding/londinium/data/network/schedule.xml" />
-		<param name="vehiclesFile" value="c:/Users/gy21jw/Coding/londinium/data/network/vehicles.xml" />
+		<param name="transitScheduleFile" value="c:/Users/gy21jw/Coding/matsim-day/londinium/data/network/schedule.xml" />
+		<param name="vehiclesFile" value="c:/Users/gy21jw/Coding/matsim-day/londinium/data/network/vehicles.xml" />
 		<param name="transitModes" value="bus,rail,subway,ferry" />
 	</module>
 
@@ -53,10 +53,10 @@
 	</module>
 
 	<module name="controler">
-		<param name="createGraphs" value="false" />
-		<param name="outputDirectory" value="C:\\Users\\gy21jw\\Coding\\londinium\\outputs\\" />
+		<param name="createGraphs" value="true" />
+		<param name="outputDirectory" value="C:/Users/gy21jw/Coding/matsim-day/londinium/outputs/londinium_r0" />
 		<param name="firstIteration" value="0" />
-		<param name="lastIteration" value="1" />
+		<param name="lastIteration" value="99" />
 		<param name="eventsFileFormat" value="xml" />
 		<param name="writeEventsInterval" value="1" />
 		<param name="writePlansInterval" value="1" />
@@ -70,7 +70,7 @@
 		<param name="mobsim" value="hermes" />
 		<param name="snapshotFormat" value="" />
 		<!-- Possible values: failIfDirectoryExists, overwriteExistingFiles, deleteDirectoryIfExists -->
-		<param name="overwriteFiles" value="overwriteExistingFiles" />
+		<param name="overwriteFiles" value="failIfDirectoryExists" />
 	</module>
 
 	<!-- <module name="SBBPt">
@@ -80,7 +80,7 @@
 
 	<module name="subtourModeChoice">
 		<!--"car,pt,walk,bike"-->
-		<param name="chainBasedModes" value="car,bike" />
+		<param name="chainBasedModes" value="car" />
 		<param name="modes" value="car,bus,rail,subway,ferry,walk,bike" />
 	</module>
 
@@ -110,7 +110,7 @@
 	</module>
 
 	<module name="travelTimeCalculator">
-		<param name="analyzedModes" value="car,bus,walk" />
+		<param name="analyzedModes" value="car,bus,subway,walk,bike,rail,ferry" />
 	</module>
 
 	<!-- TESTING ADDING THE UPDATED ROUTING TYPE MODULE -->
